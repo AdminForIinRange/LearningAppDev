@@ -102,6 +102,8 @@ const Home = () => {
                   clickSignup={clickSignup}
                   clickLogin={clickLogin}
                   handleSubmit={handleSubmit}
+                  setverified={setverified}
+                  verified={verified}
                 />
               )}
               {clickSignup && (

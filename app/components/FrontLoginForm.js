@@ -12,6 +12,8 @@ import {
 } from "native-base";
 
 const FrontLoginForm = ({
+  setverified,
+  verified,
   clickSignup,
   setclickSignup,
   clickLogin,
@@ -20,7 +22,7 @@ const FrontLoginForm = ({
 }) => {
   return (
     <>
-      <Box display={clickLogin ? "flex" : "none"}>
+      <Box display={clickLogin ? "flex" : "none"} w={"100%"}>
         <Text
           mt="30px"
           textAlign="center"
@@ -33,28 +35,31 @@ const FrontLoginForm = ({
         <Text fontSize="18px" color="gray.400" textAlign="center">
           Login and get started
         </Text>
-        
-        <Box
-          mt="45px"
-          w="90%"
+
+        <VStack
+        style={{gap:"5px"}}
+         
+          w="100%"
           maxW="500px"
           rounded="xl"
           textAlign="center"
           alignSelf="center"
         >
-          <FormControl mt="25px" isRequired>
+          <FormControl mt="25px" isRequired w={"100%"} h={"45px"}>
             <FormControl.Label>Email</FormControl.Label>
             <Input
               placeholder="Enter your Email Address"
               type="email"
-              w="100%"
               autoComplete="email"
+              w={"100%"}
+              h={"45px"}
             />
           </FormControl>
 
-          <FormControl mt="25px" isRequired>
-            <FormControl.Label>Password</FormControl.Label>
+          <FormControl w={"100%"} h={"45px"} mt="25px" isRequired>
+            <FormControl.Label w={"100%"}>Password</FormControl.Label>
             <Input
+              h={"45px"}
               placeholder="Enter your password"
               type="password"
               w="100%"
@@ -62,37 +67,45 @@ const FrontLoginForm = ({
             />
           </FormControl>
 
-          <HStack mt="15px" justifyContent="space-between">
-            <Checkbox>Remember me</Checkbox>
-            <Button variant="link" size="sm">
-              Forgot password?
-            </Button>
-          </HStack>
-
-          <Button
-            h="50px"
-            borderRadius="30px"
-            bgColor="#0161F0"
-            color="white"
-            mt="30px"
-            w="100%"
-            onPress={handleSubmit}
-          >
-            Login
-          </Button>
-
-          <Button
-            h="50px"
-            borderRadius="30px"
-            colorScheme="gray"
-            mt="10px"
-            w="100%"
-            onPress={() => setclickLogin(false)}
-          >
-            Back
-          </Button>
-        </Box>
+          <HStack mt="15px" justifyContent="space-between"></HStack>
+        </VStack>
       </Box>
+
+      <VStack
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+        }}
+      >
+        <Button
+        mt={"25px"}
+          
+          onPress={() => setverified(true)}
+          bg="#0161F0"
+          borderRadius={30}
+          h={50}
+          w="100%"
+          p={3}
+          _text={{
+            fontSize: [16, 14, 16],
+            fontWeight: "400",
+            color: "white",
+          }}
+        >
+          Next
+        </Button>
+        <Button
+          mt={"8px"}
+          h="50px"
+          borderRadius="30px"
+          colorScheme="gray"
+          w="100%"
+          onPress={() => setclickLogin(false)}
+        >
+          Back
+        </Button>
+      </VStack>
     </>
   );
 };

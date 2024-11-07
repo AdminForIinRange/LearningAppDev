@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Text, Link } from "native-base";
+import { Box, Button, Text, Link, VStack } from "native-base";
 
 const BottomWellcome = ({
   clickSignup,
@@ -46,27 +46,35 @@ const BottomWellcome = ({
       </Text>
 
       <Box mt={5} />
-      {buttons.map(({ name, onClick, bgcolor, textColor }) => {
-        return (
-          <Button
-            key={name}
-            mt={3}
-            onPress={onClick}
-            bg={bgcolor}
-            borderRadius={30}
-            h={50}
-            w="100%"
-            p={3}
-            _text={{
-              fontSize: [16, 14, 16],
-              fontWeight: "400",
-              color: textColor,
-            }}
-          >
-            {name}
-          </Button>
-        );
-      })}
+      <VStack
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+        }}
+      >
+        {buttons.map(({ name, onClick, bgcolor, textColor }) => {
+          return (
+            <Button
+              key={name}
+              mt={3}
+              onPress={onClick}
+              bg={bgcolor}
+              borderRadius={30}
+              h={50}
+              w="100%"
+              p={3}
+              _text={{
+                fontSize: [16, 14, 16],
+                fontWeight: "400",
+                color: textColor,
+              }}
+            >
+              {name}
+            </Button>
+          );
+        })}
+      </VStack>
 
       <Box mt={5} w={"100%"} textAlign={"center"} />
       <Text
