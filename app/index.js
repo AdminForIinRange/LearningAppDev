@@ -47,11 +47,7 @@ const Home = () => {
    *    - Focus on the bigger picture and make sure the app is fully functional
    *    - Don't get bogged down in small UI fixes
    */
-
-
-
-
-
+// improve hover, button, everything, try, also add cloud login, it would be fun 
 
 
 

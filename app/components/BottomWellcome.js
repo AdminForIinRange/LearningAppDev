@@ -34,7 +34,6 @@ const BottomWellcome = ({
       display={clickSignup || clickLogin ? "none" : "flex"}
     >
       <Text
-      
         fontSize="25px"
         fontWeight="700"
         color="#3A3A3A"
@@ -63,7 +62,7 @@ const BottomWellcome = ({
               bg={bgcolor}
               borderRadius={30}
               h={50}
-              w="100%"
+              w="112%"
               p={3}
               _text={{
                 fontSize: [16, 14, 16],
