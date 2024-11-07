@@ -17,6 +17,51 @@ import BottomWellcome from "./components/BottomWellcome";
 import FrontLoginForm from "./components/FrontLoginForm";
 import FrontSignupForm from "./components/FrontSignupForm";
 const Home = () => {
+
+
+
+
+
+  /**
+   * TODO:
+   * 1. Better Auth
+   *    - Use a more secure way of storing user credentials
+   *    - Implement a secure way of verifying user credentials
+   * 2. Font
+   *    - Use a more visually appealing font
+   * 3. Create separate pages
+   *    - Create a separate page for login and signup
+   *    - Create a separate page for the home screen
+   * 4. Improve UI
+   *    - Improve the overall UI of the app
+   *    - Use a more visually appealing design
+   * 5. Animation
+   *    - Add animations to make the app more visually appealing
+   * 6. Focus on the home screen
+   *    - Add the necessary features to the home screen
+   *    - Make sure the home screen is fully functional
+   * 7. Do all the stuff needed
+   *    - Make sure all the necessary features are implemented
+   *    - Make sure the app is fully functional
+   * 8. Don't focus too much on small UI fixes
+   *    - Focus on the bigger picture and make sure the app is fully functional
+   *    - Don't get bogged down in small UI fixes
+   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const [show, setShow] = useState(false);
   const [clickLogin, setclickLogin] = useState(false);
   const [clickSignup, setclickSignup] = useState(false);

@@ -34,8 +34,9 @@ const BottomWellcome = ({
       display={clickSignup || clickLogin ? "none" : "flex"}
     >
       <Text
+      
         fontSize="25px"
-        fontWeight="600"
+        fontWeight="700"
         color="#3A3A3A"
         textAlign={"center"}
       >
